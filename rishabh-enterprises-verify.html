@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rishabh Enterprises — Certificate Verification</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#f5f4f0;color:#1a1a1a;min-height:100vh}
+.header{background:#1a2744;padding:2.5rem 2rem;text-align:center}
+.header-badge{display:inline-block;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:1rem}
+.header h1{font-family:'Playfair Display',serif;font-size:2rem;color:#fff;font-weight:600;line-height:1.2;margin-bottom:0.5rem}
+.header p{color:rgba(255,255,255,0.55);font-size:13px;font-weight:300;letter-spacing:0.5px}
+.container{max-width:680px;margin:0 auto;padding:2rem 1.5rem}
+.card{background:#fff;border-radius:12px;border:0.5px solid #e0ddd5;padding:1.5rem;margin-bottom:1.25rem}
+.card-title{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#888;font-weight:500;margin-bottom:1rem;display:flex;align-items:center;gap:8px}
+.card-title::after{content:'';flex:1;height:0.5px;background:#e0ddd5}
+.info-row{display:flex;align-items:flex-start;gap:12px;padding:8px 0;border-bottom:0.5px solid #f0ede8}
+.info-row:last-child{border-bottom:none}
+.info-label{font-size:12px;color:#888;min-width:120px;padding-top:1px}
+.info-value{font-size:14px;color:#1a1a1a;font-weight:500;line-height:1.5}
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:500;background:#e8f5ee;color:#1a6640;margin-top:2px}
+.verify-section{background:#1a2744;border-radius:12px;padding:1.75rem;margin-bottom:1.25rem}
+.verify-section h3{color:#fff;font-family:'Playfair Display',serif;font-size:1.1rem;margin-bottom:0.5rem}
+.verify-section p{color:rgba(255,255,255,0.55);font-size:12px;margin-bottom:1.25rem;line-height:1.6}
+.verify-input-row{display:flex;gap:8px}
+.verify-input{flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:8px;padding:10px 14px;color:#fff;font-size:14px;font-family:'DM Sans',sans-serif;outline:none}
+.verify-input::placeholder{color:rgba(255,255,255,0.3)}
+.verify-input:focus{border-color:rgba(255,255,255,0.4)}
+.verify-btn{background:#fff;color:#1a2744;border:none;border-radius:8px;padding:10px 18px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:opacity 0.15s}
+.verify-btn:hover{opacity:0.85}
+.result-box{margin-top:1rem;padding:1rem;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);display:none}
+.result-box.show{display:block}
+.result-status{font-size:13px;font-weight:500;margin-bottom:6px}
+.result-detail{color:rgba(255,255,255,0.65);font-size:12px;line-height:1.8}
+.download-btn{display:inline-flex;align-items:center;gap:8px;margin-top:14px;background:#27ae60;color:#fff;border:none;border-radius:8px;padding:11px 20px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:none;transition:background 0.15s}
+.download-btn:hover{background:#1e8449}
+.download-btn svg{width:15px;height:15px;flex-shrink:0}
+.cert-id{font-family:monospace;background:#f5f4f0;border:0.5px solid #e0ddd5;border-radius:6px;padding:2px 8px;font-size:12px;color:#555}
+.seal-row{display:flex;align-items:center;gap:10px;margin-top:1rem;padding-top:1rem;border-top:0.5px solid #f0ede8}
+.seal-icon{width:36px;height:36px;border-radius:50%;background:#1a2744;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.seal-icon span{color:#fff;font-size:14px;font-weight:600;font-family:'Playfair Display',serif}
+.seal-text{font-size:11px;color:#888;line-height:1.6}
+.seal-text strong{color:#333;display:block;font-size:12px}
+.footer{text-align:center;padding:2rem 1.5rem;color:#aaa;font-size:11px;letter-spacing:0.5px}
+@media(max-width:500px){
+  .verify-input-row{flex-direction:column}
+  .verify-btn{width:100%}
+  .info-label{min-width:90px}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-badge">Registered Firm</div>
+  <h1>Rishabh Enterprises</h1>
+  <p>119/36, Thadi Market, Agarwal Farm, Mansarover, Jaipur — 302029</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <div class="card-title">Company Information</div>
+    <div class="info-row">
+      <span class="info-label">Legal Name</span>
+      <span class="info-value">Rishabh Enterprises</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Registration No.</span>
+      <span class="info-value"><span class="cert-id">08884351925</span></span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Address</span>
+      <span class="info-value">119/36, Thadi Market, Agarwal Farm,<br>Mansarover, Jaipur — 302029, Rajasthan</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Status</span>
+      <span class="info-value"><span class="badge">&#10003; Active</span></span>
+    </div>
+  </div>
+
+  <div class="verify-section">
+    <h3>Certificate Verification</h3>
+    <p>Enter the Certificate ID printed on the internship certificate to verify its authenticity.</p>
+    <div class="verify-input-row">
+      <input class="verify-input" type="text" id="certInput" placeholder="e.g. RE-2026-001" />
+      <button class="verify-btn" onclick="verifyCert()">Verify</button>
+    </div>
+    <div class="result-box" id="resultBox">
+      <div class="result-status" id="resultStatus"></div>
+      <div class="result-detail" id="resultDetail"></div>
+      <div id="downloadArea"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Intern Record</div>
+    <div class="info-row">
+      <span class="info-label">Certificate ID</span>
+      <span class="info-value"><span class="cert-id">RE-2026-001</span></span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Name</span>
+      <span class="info-value">Prerit Jain</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Role</span>
+      <span class="info-value">Analyst (Intern)</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Duration</span>
+      <span class="info-value">11 February 2026 &mdash; 30 March 2026</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Total Period</span>
+      <span class="info-value">48 Days</span>
+    </div>
+    <div class="info-row">
+      <span class="info-label">Status</span>
+      <span class="info-value"><span class="badge">&#10003; Successfully Completed</span></span>
+    </div>
+    <div class="seal-row">
+      <div class="seal-icon"><span>RE</span></div>
+      <div class="seal-text">
+        <strong>Rishabh Enterprises</strong>
+        Authorised by proprietor &middot; Seal &amp; Signature on original document
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">&copy; 2026 Rishabh Enterprises &middot; All rights reserved &middot; Jaipur, Rajasthan</div>
+
+<script>
+var PDF_B64 = "JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIgL0Y0IDUgMCBSIC9GNSA2IDAgUiAvRjYgNyAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YxIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKMyAwIG9iago8PAovQmFzZUZvbnQgL1RpbWVzLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YyIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNCAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMyAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0Jhc2VGb250IC9Db3VyaWVyIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GNCAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0Jhc2VGb250IC9Db3VyaWVyLUJvbGQgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0Y1IC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKNyAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1PYmxpcXVlIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GNiAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjggMCBvYmoKPDwKL0NvbnRlbnRzIDEyIDAgUiAvTWVkaWFCb3ggWyAwIDAgNTk1LjI3NTYgODQxLjg4OTggXSAvUGFyZW50IDExIDAgUiAvUmVzb3VyY2VzIDw8Ci9Gb250IDEgMCBSIC9Qcm9jU2V0IFsgL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSSBdCj4+IC9Sb3RhdGUgMCAvVHJhbnMgPDwKCj4+IAogIC9UeXBlIC9QYWdlCj4+CmVuZG9iago5IDAgb2JqCjw8Ci9QYWdlTW9kZSAvVXNlTm9uZSAvUGFnZXMgMTEgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iagoxMCAwIG9iago8PAovQXV0aG9yIChhbm9ueW1vdXMpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjA1MTEwMzQ4NTUrMDAnMDAnKSAvQ3JlYXRvciAoYW5vbnltb3VzKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjA1MTEwMzQ4NTUrMDAnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAodW5zcGVjaWZpZWQpIC9UaXRsZSAodW50aXRsZWQpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKMTEgMCBvYmoKPDwKL0NvdW50IDEgL0tpZHMgWyA4IDAgUiBdIC9UeXBlIC9QYWdlcwo+PgplbmRvYmoKMTIgMCBvYmoKPDwKL0ZpbHRlciBbIC9BU0NJSTg1RGVjb2RlIC9GbGF0ZURlY29kZSBdIC9MZW5ndGggNzc3Cj4+CnN0cmVhbQpHYXQ9KDlsQ1wiJkFANy5iUiI8RUIpVixhJTs6Wlc1WE9fbCYtbGs2RkJwMl5hUWoja2hfVEY2YWNbQTdaKkBjW1Jka2FyQilGJWtwblJaIj8zNU1VaTtGQW9iK1AxKidndD1bJ2VaTm5UYG0iXyJbWExjIm4jKENWZF1GSV9WdDZiIl5bdU5cS2pqQSJrbGReOVBHVi9cPShdXExlMTdmRVg1Tl8nXzNvLUUmWW4vKGJoLjVFREckISQuJWokVC4zUkZUYSE9bUUydDp0XjJCXFJEOmVQP0h1XkQsXFpdamxEa09bc2xLck9YWSpTM2IzRlRPNyx1NVUmbW9xUC86YVFVdSonbVRIJiJscV80MjtTNDpoUyxhYDVdZiw8IUdJI2JmdW4kKy8oR2IiQEZqaDdcdFBFMCksXVpYRF0yWm4iY0VdW1ZNZi9qIlluVzInWWQ7V1xic3FgY2ZgJUZtWmJYaENmV2BXKXExOF9GOFlWW0tWMEUiMzAiLUwpZFZJa101UzgtWWY9WSJzYnNFZTpBLjQ/IzcoY2BGIllCJ0pWX0QwUjVwZyZaMzlYbSZZY108OFRiM2M/N0dMSWtSbFhLTHFbXDs8ZTgrNEtPaV81LU5gbW9KVU45J2hrSVdfVDJBcEw6WUozYS9CJlFPXHFgMmNyOlVyMixgQS1oTiIwOz5bTyM9b15YUEFTZVZETGk9X21wVj8mRFUjdVJ0J0JlZnI8b0NGbUVMZ21sPE0pSSVJYFZzXCkwIU5nay0xKC9OTVE1X0RrW1Vxa3JPQFAjSihORGEkQ2VkZilDSkNNUEZnLHFxMSlJLUJuUitYZ2lFOG0ycE8mNmVcSjdWcFxYZCVlQFwwTU9qKCFzOW04WCdAKmQtdTJfK1x1WSksdChFdEFHNUFETiNiMFheWWA2aVQybVpPNGshWVRSUHU7JTknXGc1bDE3P1JkdVNGRStQLkg4SyhnKVRMIjswRClUXTpdOnNQK2AoQShqcG5MOkc8UnFgTjsxcVopLDEjMEFdKCIqfj5lbmRzdHJlYW0KZW5kb2JqCnhyZWYKMCAxMwowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwNjEgMDAwMDAgbiAKMDAwMDAwMDE0MiAwMDAwMCBuIAowMDAwMDAwMjQ5IDAwMDAwIG4gCjAwMDAwMDAzNTcgMDAwMDAgbiAKMDAwMDAwMDQ2OSAwMDAwMCBuIAowMDAwMDAwNTc0IDAwMDAwIG4gCjAwMDAwMDA2ODQgMDAwMDAgbiAKMDAwMDAwMDc5OSAwMDAwMCBuIAowMDAwMDAxMDA0IDAwMDAwIG4gCjAwMDAwMDEwNzMgMDAwMDAgbiAKMDAwMDAwMTMzNSAwMDAwMCBuIAowMDAwMDAxMzk1IDAwMDAwIG4gCnRyYWlsZXIKPDwKL0lEIApbPGQyYTY1Mjk4ODY0ZWQyZDk1NzM2OWI4YjczYjVkYzViPjxkMmE2NTI5ODg2NGVkMmQ5NTczNjliOGI3M2I1ZGM1Yj5dCiUgUmVwb3J0TGFiIGdlbmVyYXRlZCBQREYgZG9jdW1lbnQgLS0gZGlnZXN0IChvcGVuc291cmNlKQoKL0luZm8gMTAgMCBSCi9Sb290IDkgMCBSCi9TaXplIDEzCj4+CnN0YXJ0eHJlZgoyMjYzCiUlRU9GCg==";
+
+var records = {
+  'RE-2026-001': {
+    name: 'Prerit Jain',
+    role: 'Analyst',
+    from: '11 February 2026',
+    to: '30 March 2026',
+    status: 'Completed',
+    filename: 'Internship_Certificate_Prerit_Jain_RE-2026-001.pdf'
+  }
+};
+
+function verifyCert() {
+  var id = document.getElementById('certInput').value.trim().toUpperCase();
+  var box = document.getElementById('resultBox');
+  var statusEl = document.getElementById('resultStatus');
+  var detailEl = document.getElementById('resultDetail');
+  var dlArea = document.getElementById('downloadArea');
+  box.classList.add('show');
+  dlArea.innerHTML = '';
+
+  if (records[id]) {
+    var r = records[id];
+    statusEl.style.color = '#6dda9e';
+    statusEl.textContent = '\u2713 Certificate Verified \u2014 Rishabh Enterprises';
+    detailEl.innerHTML = 'Name: <strong style="color:#fff">' + r.name + '</strong> &nbsp;&middot;&nbsp; Role: ' + r.role + ' &nbsp;&middot;&nbsp; ' + r.from + ' to ' + r.to + ' &nbsp;&middot;&nbsp; ' + r.status;
+    var btn = document.createElement('a');
+    btn.className = 'download-btn';
+    btn.href = 'data:application/pdf;base64,' + PDF_B64;
+    btn.download = r.filename;
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download Certificate PDF';
+    dlArea.appendChild(btn);
+  } else {
+    statusEl.style.color = '#f08080';
+    statusEl.textContent = '\u2717 Certificate Not Found';
+    detailEl.innerHTML = 'This ID does not match any record. Please check the certificate and try again.';
+  }
+}
+
+document.getElementById('certInput').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') verifyCert();
+});
+</script>
+
+</body>
+</html>
